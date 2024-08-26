@@ -1,0 +1,72 @@
+body{
+    background-image: url('/assets/images/wedding.jpg');
+    background-attachment: fixed;
+    background-size:cover;
+    
+}
+.talent__container .section__header {
+    text-align: center;
+  }
+  
+  .talent__grid {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .talent__card {
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    border: 2px solid transparent;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s;
+    background: #fff;
+  }
+  
+  .talent__card:hover {
+    border-color: var(--text-dark);
+  }
+  
+  .talent__card span {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 5px 13px;
+    font-size: 2rem;
+    color: var(--text-dark);
+    background-color: var(--extra-light);
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  
+  .talent__card:hover span {
+    color: var(--white);
+    background-color: var(--text-dark);
+  }
+  
+  .talent__card h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  
+  .talent__card p {
+    color: var(--text-light);
+  }
+
+  @media (width > 1024px) {
+    .talent__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  @media (width < 768px) {
+    .talent__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+  }  
+  @media (width < 540px) {
+    .talent__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+  }

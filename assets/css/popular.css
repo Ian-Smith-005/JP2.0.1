@@ -1,0 +1,77 @@
+
+.popular__grid {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .popular__card {
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+  }
+  
+  .popular__card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .popular__card img {
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  .popular__card p {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-light);
+  }
+  
+  .popular__card h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  
+  .popular__card > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .popular__card .rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-light);
+  }
+  
+  .popular__card .rating span {
+    font-size: 1.2rem;
+    color: goldenrod;
+  }
+  
+  .popular__card .price {
+    color: var(--text-light);
+  }
+  
+  .popular__card .price span {
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+
+  @media (width > 540px) {
+    .popular__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (width > 768px) {
+    .popular__grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
