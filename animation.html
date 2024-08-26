@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filterable responsive lightbox gallery tutorial</title>
+
+    <!-- magnific-popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<style>
+    *{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    transition:all .2s cubic-bezier(.34,1.12,.68,1.31);
+}
+
+.gallery{
+    min-height: 100vh;
+    background:#eee;
+    padding-bottom: 100px;
+}
+
+.gallery .controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:20px 0;
+    list-style: none;
+}
+
+.gallery .controls .buttons{
+    height:40px;
+    width: 140px;
+    background:#fff;
+    color:#666;
+    font-size: 20px;
+    line-height: 40px;
+    cursor: pointer;
+    margin:20px;
+    box-shadow: 0 3px 5px rgba(0,0,0,.3);
+    text-align: center;
+}
+
+.gallery .controls .buttons.active{
+    background:coral;
+    color:#fff;
+}
+
+.gallery .image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position:fixed;
+}
+
+.gallery .image-container .image{
+    height:250px;
+    width: 350px;
+    overflow: hidden;
+    border:15px solid #fff;
+    box-shadow: 0 3px 5px rgba(0,0,0,.3);
+    margin: 20px;
+}
+
+.gallery .image-container .image img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.gallery .image-container .image:hover img{
+    transform: scale(1.4);
+}
+</style>
+<body>
+
+
+<div class="gallery">
+
+    <ul class="controls">
+        <li class="buttons active" data-filter="all">all</li>
+        <li class="buttons" data-filter="ice-cream">ice-cream</li>
+        <li class="buttons" data-filter="chocolate">chocolate</li>
+        <li class="buttons" data-filter="cake">cake</li>
+        <li class="buttons" data-filter="juice">juice</li>
+        <li class="buttons" data-filter="sandwich">sandwich</li>
+    </ul>
+
+    <div class="image-container">
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (1).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (1).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (2).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (2).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (3).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (3).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (4).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (4).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (5).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (5).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (6).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (6).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (7).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (7).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (8).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (8).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (9).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (9).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (10).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (10).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (11).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (11).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (12).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (12).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (13).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (13).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (14).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (14).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (15).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (15).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (16).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (17).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (18).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (18).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (19).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (19).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (20).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (20).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (21).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (21).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (22).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (22).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (23).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (23).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (24).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (24).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (25).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (25).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (26).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (26).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (27).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (27).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (28).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (28).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (29).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (29).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (30).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (30).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (31).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (31).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (32).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (32).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (33).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (33).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (34).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (34).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (35).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (35).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (36).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (36).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (37).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (37).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (38).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (38).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (39).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (39).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (40).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (40).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (41).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (41).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (42).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (42).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (43).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (43).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (44).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (44).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (45).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (45).jpg" alt="">
+        </a>
+        <a href="assets/images/Joyalty Lightbox/JP_Gallery (46).jpg" class="image wedding">
+            <img src="assets/images/Joyalty Lightbox/JP_Gallery (46).jpg" alt="">
+        </a>
+       
+
+
+    </div>
+
+</div>
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- magnific popup js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+    $('.buttons').click(function(){
+
+        $(this).addClass('active').siblings().removeClass('active');
+
+        var filter = $(this).attr('data-filter')
+
+        if(filter == 'all'){
+            $('.image').show(400);
+        }else{
+            $('.image').not('.'+filter).hide(200);
+            $('.image').filter('.'+filter).show(400);
+        }
+
+    });
+
+    $('.gallery').magnificPopup({
+
+        delegate:'a',
+        type:'image',
+        gallery:{
+            enabled:true
+        }
+
+    });
+
+});
+
+</script>
+    
+</body>
+</html>
