@@ -22,6 +22,8 @@
 <link rel="stylesheet" href="assets/css/popular.css">
 <link rel="stylesheet" href="assets/css/testimonial.css">
 <link rel="stylesheet" href="assets/css/footer.css">
+<link rel="stylesheet" href="assets/css/drop.css">
+<link rel="stylesheet" href="assets/css/us.css">
 <!--Styles-->
 </head>
 <body>
@@ -43,24 +45,23 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="Service.html">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Gallery</a>
+                        <a class="nav-link" href="Gallery.html">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link active" href="#">Contact</a>
                     </li>
                 </ul>
                 <form class="d-flex ms-lg-4 my-2 my-lg-0">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
-                <div class="d-flex ms-3">
-                                    <div class="dropdown">
+                <div class="dropdown">
                   <a href="#" class="btn btn-outline-primary me-2 dropdown-toggle" id="receiptDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                       <i class="fa-solid fa-receipt"></i> <span id="receiptCounter" class="badge bg-danger">0</span>
                   </a>
@@ -73,176 +74,85 @@
               </div>
                  <!-- Placeholder for receipts when a notification is clicked -->
     <div id="receiptContainer"></div>
-                     
-                </div>
             </div>
         </div>
     </nav>
 
-    <section class="hero-section">
-        <div class="hero-content">
-            <!-- Hero Section -->
-           <!-- Heading with scrolling text -->
-    <h1>
-      <span class="text-container">
-          <span class="text-slide">
-              Capture<br>
-              Savour<br>
-              Relive<br>
-              Enjoy
-          </span>
-      </span>
-      Your Precious Moments
-  </h1>
-            <p>Professional photography services for weddings, portraits, and events.</p>
-            <a href="#" class="btn btn-primary booking">Book a Session</a>
-        </div>
-    </section>
-    <style>
-      .section__header{
-        background-color: darkcyan;
-        text-align: center;
-        padding: 10px;
-        margin: 0px auto;
-        font-size: 15px;
-        color: white;
-        text-transform: uppercase;
-      }
-    </style>
-<!--Services-->
-<div class="section__container popular__container">
-    <h2 class="section__header">Most Popular Gigs</h2>
-    <div class="popular__grid">
-      <div class="popular__card">
-        <img src="assets/images/potrait.jpg" alt="popular" />
-        <p>Joyalty</p>
-        <h4>The Portrait Sessions</h4>
-        <div>
-          <div class="rating">
-            <span><i class="ri-star-fill"></i></span>
-            5.0 (549)
+<!--Body-->
+<div class="container">
+  <!-- Meet the Team Section -->
+  <section class="team-container">
+      <h2>Meet the Team</h2>
+      <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12 team-member">
+              <img src="assets/images/Joyalty Lightbox/JP_Gallery (10).jpg" alt="Team Member 1">
+              <h4>Steve Moses</h4>
+              <p>Lead Photographer</p>
           </div>
-          <div class="price">Start from: <span>$150</span></div>
-        </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 team-member">
+              <img src="assets/images/Joyalty Lightbox/JP_Gallery (10).jpg" alt="Team Member 1">
+              <h4>Mike Joyalty</h4>
+              <p>Event Photographer</p>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 team-member">
+              <img src="assets/images/Joyalty Lightbox/JP_Gallery (10).jpg" alt="Team Member 1">
+              <h4>Thrid Member</h4>
+              <p>Portrait Specialist</p>
+          </div>
       </div>
-      <div class="popular__card">
-        <img src="assets/images/aerial outdoor.jpg" alt="popular" />
-        <p>Joyalty</p>
-        <h4>Outdoor Adventure Shoot</h4>
-        <div>
-          <div class="rating">
-            <span><i class="ri-star-fill"></i></span>
-            4.9 (796)
-          </div>
-          <div class="price">Start from: <span>$200</span></div>
-        </div>
-      </div>
-      <div class="popular__card">
-        <img src="assets/images/cityscape.jpg" alt="popular" />
-        <p>Joyalty</p>
-        <h4>Photography Tour</h4>
-        <div>
-          <div class="rating">
-            <span><i class="ri-star-fill"></i></span>
-            4.5 (490)
-          </div>
-          <div class="price">Start from: <span>$250</span></div>
-        </div>
-      </div>
-      <div class="popular__card">
-        <img src="assets/images/wedding.jpg" alt="popular" />
-        <p>Joyalty</p>
-        <h4>Elegant Wedding Photography</h4>
-        <div>
-          <div class="rating">
-            <span><i class="ri-star-fill"></i></span>
-            4.8 (945)
-          </div>
-          <div class="price">Start from: <span>$500</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!--Testimonial-->
-  <section class="section__container client__container">
-    <h2 class="section__header">What Others Say</h2>
-    <!-- Slider main container -->
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <div class="client__card">
-            <p>
-              CapturedMoments truly lives up to their name! Their expertise in
-              portrait photography is unmatched. As a business owner, having
-              professional headshots taken was a breeze, and the results
-              exceeded my expectations.
-            </p>
-            <div class="client__footer">
-              <div>
-                <h4>BusinessPro</h4>
-                <h5>Small Business Owner</h5>
-              </div>
-              <span><i class="ri-double-quotes-r"></i></span>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="client__card">
-            <p>
-              WanderlustLens made our outdoor adventure shoot an unforgettable
-              experience. Their creativity and passion for photography truly
-              shone through in every shot. I couldn't be happier with the
-              memories they captured.
-            </p>
-            <div class="client__footer">
-              <div>
-                <h4>AdventureSeeker</h4>
-                <h5>Outdoor Enthusiast</h5>
-              </div>
-              <span><i class="ri-double-quotes-r"></i></span>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="client__card">
-            <p>
-              UrbanFrames captured the essence of the city like no other.
-              Their cityscape photography tour was not only informative but
-              also incredibly inspiring. I'm grateful for the stunning images
-              I now have to remember my trip by.
-            </p>
-            <div class="client__footer">
-              <div>
-                <h4>CityExplorer</h4>
-                <h5>Travel Blogger</h5>
-              </div>
-              <span><i class="ri-double-quotes-r"></i></span>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="client__card">
-            <p>
-              WeddingWhispers turned our special day into timeless memories.
-              Their attention to detail and ability to capture the emotions of
-              the moment were truly remarkable. I'm grateful for the stunning
-              photographs we'll cherish for a lifetime.
-            </p>
-            <div class="client__footer">
-              <div>
-                <h4>HappilyEverAfter</h4>
-                <h5>Newlywed</h5>
-              </div>
-              <span><i class="ri-double-quotes-r"></i></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
+
+  <!-- Contact Details Section -->
+  <section class="contact-details-container">
+      <h2>Contact Details</h2>
+      <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12 contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                  <h5>Our Location</h5>
+                  <p>Mombasa County</p>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                  <h5>Email Us</h5>
+                  <p>info@joyaltyphotography.com</p>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 contact-item">
+              <i class="fa-brands fa-facebook"></i>
+              <div>
+                  <h5>Follow Us</h5>
+                  <p>Facebook, Instagram, Twitter</p>
+              </div>
+          </div>
+          
+      </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="form-container">
+      <h2>Write to Us</h2>
+      <form>
+          <div class="mb-3">
+              <label for="fullName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+          </div>
+          <div class="mb-3">
+              <label for="emailAddress" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="emailAddress" placeholder="Enter your email address" required>
+          </div>
+          <div class="mb-3">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Write your message here" required></textarea>
+          </div>
+          <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-submit">Send Message</button>
+          </div>
+      </form>
+  </section>
+</div>
 
 
   <!--Footer-->
