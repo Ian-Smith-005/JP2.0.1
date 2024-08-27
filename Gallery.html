@@ -62,8 +62,19 @@
                     <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
                 <div class="d-flex ms-3">
-                    <a href="#" class="btn btn-outline-primary me-2"><i class="fa-brand fa-open-cart"></i> </a>
-                    <a href="Profile.html" class="btn btn-outline-secondary"><i class="fa-solid fa-user"></i> </a>
+                                    <div class="dropdown">
+                  <a href="#" class="btn btn-outline-primary me-2 dropdown-toggle" id="receiptDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-solid fa-receipt"></i> <span id="receiptCounter" class="badge bg-danger">0</span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end receipt-notification" aria-labelledby="receiptDropdown">
+                      <li class="dropdown-header">Recent Purchases</li>
+                      <div id="notificationList">
+                          <!-- Dynamic Notification Items will appear here -->
+                      </div>
+                  </ul>
+              </div>
+                 <!-- Placeholder for receipts when a notification is clicked -->
+    <div id="receiptContainer"></div>
                 </div>
             </div>
         </div>

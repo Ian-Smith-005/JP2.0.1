@@ -432,5 +432,51 @@
       },
     });
   </script>
+  <script>
+document.getElementById('orderForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const fullName = document.getElementById('fullName').value;
+    const email = document.getElementById('email').value || 'Not provided';
+    const phoneNumber = document.getElementById('phoneNumber').value;
+    const serviceType = document.getElementById('serviceType').value;
+    const location = document.getElementById('location').value;
+
+    const receiptData = {
+        fullName,
+        email,
+        phoneNumber,
+        serviceType,
+        location,
+        ticketID: Math.floor(100000 + Math.random() * 900000) // Generate random ticket ID
+    };
+
+    // Store the receipt in local storage
+    let receipts = JSON.parse(localStorage.getItem('receipts')) || [];
+    receipts.push(receiptData);
+    localStorage.setItem('receipts', JSON.stringify(receipts));
+
+    // Send data to the server to email the details
+    fetch('http://localhost:3000/send-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(receiptData)
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert('Order submitted successfully!');
+        // Optionally close the modal
+        const modal = bootstrap.Modal.getInstance(document.getElementById('orderModal'));
+        modal.hide();
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to submit the order.');
+    });
+});
+</script>
+
 </body>
 </html>
